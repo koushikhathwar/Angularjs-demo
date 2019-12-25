@@ -1,0 +1,24 @@
+<h1> This is a people page </h1>
+
+
+      <body ng-controller="dropdownController" ng-model="userSelect" ng-change="showDetails()" id="users">
+        <select name = 'users'>
+          <option value="">--Select User--</option>
+          <option ng-repeat="user in users" > {{ user.name }}</option>
+        </select>
+                                                                                                                                                  <br>
+      <span ng-repeat="posts in users">username: {{ user.name }}</span> 
+       
+         <span>User Name: {{user.name}} UserIddd: {{user.userId}} {{myposts}}</span>
+         <span style="color:red">{{user.email}}</span>
+    <br>
+    <br>  
+    <ul ng-cloak>
+      <li ng-repeat="user in users">
+        <a href="#!people/{{ user.id }}">{{ user.name }}</a>
+        <br>
+        <i>{{ user.email }}</i>
+      </li>
+  </ul>
+</body>
+
